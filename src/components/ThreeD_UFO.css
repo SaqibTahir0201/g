@@ -1,0 +1,216 @@
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/bimbo");
+
+
+.threed-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #0026ff; */
+  /* color: #ced1f8; */
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  /* background-image: url(img/bg.png),
+    repeating-linear-gradient(
+      to right,
+      transparent 0 500px,
+      #001aff33 500px 501px
+    ); */
+  background-size: 100%;
+}
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  /* background-color: red; */
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.content-fit {
+  width: min(1200px, 90vw);
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  padding-block: 10em;
+}
+header {
+  padding-block: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  /* background-color: #1b1b1b11; */
+  /* background-image: repeating-linear-gradient(
+    to right,
+    transparent 0 500px,
+    #eee1 500px 501px
+  ); */
+}
+header .content-fit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: unset !important;
+  padding-block: unset !important;
+}
+header .content-fit nav ul {
+  display: flex;
+  gap: 2em;
+}
+
+#banner .title {
+  /* color: #484bff; */
+  font-size: 11em;
+  font-family: "devil breeze";
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+#banner .title::before {
+  content: attr(data-before);
+  position: absolute;
+  top: 0.5em;
+  inset: 0.66em 0 0 0;
+  z-index: -1;
+  /* color: #222d50; */
+}
+.section .decorate {
+  position: absolute;
+}
+.left .content-fit {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .number {
+  font-family: "devil breeze";
+  font-size: 15em;
+  font-weight: bold;
+}
+.section .content-fit .title {
+  font-family: "devil breeze";
+  font-size: 5em;
+  font-weight: bold;
+}
+.right .content-fit {
+  flex-direction: row-reverse;
+}
+/* #description .number {
+    font-size: 5em;
+} */
+#description .title {
+  font-size: 7em;
+  font-weight: 500;
+}
+#contact .content-fit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#contact table {
+  width: min(800px, 90vw);
+  padding-top: 2em;
+  font-size: 2em;
+  margin: auto;
+}
+#contact table td {
+  padding-block: 0.5em;
+  border-bottom: 1px dashed #252250;
+}
+#contact table td:nth-child(1) {
+  text-align: left;
+  font-weight: 500;
+}
+#contact table td:nth-child(2) {
+  text-align: right;
+  font-weight: 200;
+}
+#contact .sign {
+  font-family: "Bimbo", sans-serif;
+  font-size: 10em;
+}
+#container3D {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+  transition: opacity 0.5s ease;
+}
+
+.horihori {
+  background-color: #070a29;
+  z-index: 1;
+  position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 5em;
+  }
+  .left .content-fit {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  #banner .title {
+    margin-top: 2em;
+    font-size: 5em;
+  }
+  .left .content-fit {
+    flex-direction: column;
+  }
+  .section .number {
+    font-size: 5em;
+    /* background-color: red; */
+  }
+  .section .content-fit .title {
+    font-size: 2em;
+  }
+  #description .content-fit {
+    padding-right: 0;
+  }
+  #contact table {
+    font-size: 1em;
+  }
+  #contact .sign {
+    font-size: 2em;
+  }
+}
+
+.rotate-left {
+  transition: transform 0.15s ease; /* Apply transition to transform */
+}
+
+.rotate-left:hover {
+  transform: rotate(-45deg) scale(1.2); /* Combine rotate and scale in one transform */
+  transition: transform 0.3s ease; /* Apply transition to transform */
+}
+
+.rotate-right {
+  transition: transform 0.15s ease; /* Apply transition to transform */
+}
+
+.rotate-right:hover {
+  transform:scale(1.5); /* Combine rotate and scale in one transform */
+  transition: transform 0.3s ease; /* Apply transition to transform */
+}
